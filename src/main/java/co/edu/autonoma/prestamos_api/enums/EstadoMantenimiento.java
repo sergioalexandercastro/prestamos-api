@@ -1,4 +1,4 @@
-package co.edu.autonoma.prestamos_api.entity;
+package co.edu.autonoma.prestamos_api.enums;
 
 public enum EstadoMantenimiento {
     PROGRAMADO,

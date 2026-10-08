@@ -1,5 +1,6 @@
 package co.edu.autonoma.prestamos_api.entity;
 
+import co.edu.autonoma.prestamos_api.enums.EstadoMantenimiento;
 import jakarta.persistence.*;
 import org.hibernate.annotations.Audited;
 import org.springframework.data.annotation.Id;

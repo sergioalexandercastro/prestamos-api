@@ -1,5 +1,6 @@
 package co.edu.autonoma.prestamos_api.entity;
 
+import co.edu.autonoma.prestamos_api.enums.EstadoEquipo;
 import jakarta.persistence.*;
 import org.springframework.data.annotation.Id;
 

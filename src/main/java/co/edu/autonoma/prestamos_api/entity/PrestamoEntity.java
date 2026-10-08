@@ -1,5 +1,6 @@
 package co.edu.autonoma.prestamos_api.entity;
 
+import co.edu.autonoma.prestamos_api.enums.EstadoPrestamo;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
