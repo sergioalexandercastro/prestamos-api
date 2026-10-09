@@ -13,10 +13,10 @@ public class MantenimientoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
-    private Long equipoId;
+    private Integer equipoId;
 
     @Column(nullable = false)
     private LocalDateTime fechaInicio;

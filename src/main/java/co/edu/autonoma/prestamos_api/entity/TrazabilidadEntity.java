@@ -12,13 +12,13 @@ public class TrazabilidadEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
-    private Long prestamoId;
+    private Integer prestamoId;
 
     @Column(nullable = false)
-    private Long usuarioId;
+    private Integer usuarioId;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)

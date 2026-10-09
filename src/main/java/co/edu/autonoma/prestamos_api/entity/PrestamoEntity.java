@@ -18,13 +18,13 @@ public class PrestamoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Integer id;
 
     @Column(nullable = false)
-    private Long usuarioId;
+    private Integer usuarioId;
 
     @Column(nullable = false)
-    private Long equipoId;
+    private Integer equipoId;
 
     @Column(nullable = false)
     private LocalDateTime fechaPrestamo;
