@@ -20,21 +20,23 @@ public class PrestamoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(name = "usuario_id", nullable = false)
     private Integer usuarioId;
 
-    @Column(nullable = false)
+    @Column(name = "equipo_id", nullable = false)
     private Integer equipoId;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_prestamo", nullable = false)
     private LocalDateTime fechaPrestamo;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_limite", nullable = false)
     private LocalDateTime fechaLimite;
 
+    @Column(name = "fecha_devolucion")
     private LocalDateTime fechaDevolucion;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 30)
     private EstadoPrestamo estado;
+
 }

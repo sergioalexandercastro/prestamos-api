@@ -2,7 +2,6 @@ package co.edu.autonoma.prestamos_api.entity;
 
 import co.edu.autonoma.prestamos_api.enums.EstadoEquipo;
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name = "equipos")
@@ -12,20 +11,23 @@ public class EquipoEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "codigo_inventario", nullable = false, unique = true, length = 50)
     private String codigoInventario;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 100)
     private String nombre;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 50)
     private String tipo;
 
+    @Column(length = 50)
     private String marca;
 
+    @Column(length = 50)
     private String modelo;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 30)
     private EstadoEquipo estado;
+
 }

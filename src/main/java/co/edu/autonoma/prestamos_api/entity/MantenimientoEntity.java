@@ -2,31 +2,30 @@ package co.edu.autonoma.prestamos_api.entity;
 
 import co.edu.autonoma.prestamos_api.enums.EstadoMantenimiento;
 import jakarta.persistence.*;
-import org.hibernate.annotations.Audited;
-import org.springframework.data.annotation.Id;
-
 import java.time.LocalDateTime;
 
 @Entity
-@Audited.Table(name = "mantenimientos")
+@Table(name = "mantenimientos")
 public class MantenimientoEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(name = "equipo_id", nullable = false)
     private Integer equipoId;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_inicio", nullable = false)
     private LocalDateTime fechaInicio;
 
+    @Column(name = "fecha_fin")
     private LocalDateTime fechaFin;
 
-    @Column(nullable = false)
+    @Column(nullable = false, length = 255)
     private String motivo;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 30)
     private EstadoMantenimiento estado;
+
 }

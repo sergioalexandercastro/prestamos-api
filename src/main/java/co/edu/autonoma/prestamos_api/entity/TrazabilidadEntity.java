@@ -2,8 +2,6 @@ package co.edu.autonoma.prestamos_api.entity;
 
 import co.edu.autonoma.prestamos_api.enums.OperacionTrazabilidad;
 import jakarta.persistence.*;
-import org.springframework.data.annotation.Id;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,18 +12,20 @@ public class TrazabilidadEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(nullable = false)
+    @Column(name = "prestamo_id", nullable = false)
     private Integer prestamoId;
 
-    @Column(nullable = false)
+    @Column(name = "usuario_id", nullable = false)
     private Integer usuarioId;
 
     @Enumerated(EnumType.STRING)
-    @Column(nullable = false)
+    @Column(nullable = false, length = 30)
     private OperacionTrazabilidad operacion;
 
-    @Column(nullable = false)
+    @Column(name = "fecha_hora", nullable = false)
     private LocalDateTime fechaHora;
 
+    @Column(length = 255)
     private String descripcion;
+
 }
